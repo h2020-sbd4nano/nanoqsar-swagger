@@ -6,7 +6,7 @@ servers:
 - url: https://atena.urv.cat/model/api/
 paths:
   /gajewicz_2015:
-    get:
+    post:
       parameters:
       - name: Metaloxide
         in: query
