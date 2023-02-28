@@ -5,21 +5,24 @@ info:
 servers:
 - url: https://atena.urv.cat/model/api/
 paths:
-  /gajewicz_2015:
+  /puzyn_2011:
     post:
-      parameters:
-      - name: Metaloxide
-        in: query
-        description: Enthalpy of formation of metal oxide (Kcal/mol)
-        schema:
-          type: float
-      - name: Mulli
-        in: query
-        description: Mulliken’s electronegativity (eV)
-        schema:
-          type: float
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PuzynMessage'
       responses:
         200:
-          description: ---
-          content: {}
-components: {}
+          description: OK
+
+components:
+  schemas:
+    PuzynMessage:
+      type: object
+      properties:
+        gasCation:
+          type: number
+          description: Enthalpy of formation of a gaseous cation (Kcal/mol)
+      required:
+        - gasCation
