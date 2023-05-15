@@ -18,7 +18,7 @@ paths:
           description: OK
   /2022_papas_eq1:
     post:
-      description: LDH(TiO2+ZnO): Papa 2015
+      description: LDH(TiO2+ZnO), Papa 2015
       requestBody:
         content:
           application/json:
@@ -29,7 +29,7 @@ paths:
           description: OK
   /2022_papas_eq2:
     post:
-      description: LDH(TiO2): Papa 2015
+      description: LDH(TiO2), Papa 2015
       requestBody:
         content:
           application/json:
@@ -40,7 +40,7 @@ paths:
           description: OK
   /2022_papas_eq3:
     post:
-      description: LDH(ZnO): Papa 2015
+      description: LDH(ZnO), Papa 2015
       requestBody:
         content:
           application/json:
@@ -51,7 +51,7 @@ paths:
           description: OK
   /anantha_2021:
     post:
-      description: Toxicity Metal-Oxide: Anantha 2021
+      description: Toxicity Metal-Oxide, Anantha 2021
       requestBody:
         content:
           application/json:
