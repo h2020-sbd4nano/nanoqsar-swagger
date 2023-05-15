@@ -6,9 +6,9 @@ servers:
 - url: https://atena.urv.cat/model/api/
 paths:
   /puzyn_2011:
-    title: Toxicity Metal-Oxide: Puzyn 2011
-    description: Prediction of toxicity of Metal-Ozide (log(1/EC50)). It corresponds to the model presented in: Using nano-QSAR to predict the cytotoxicity of metal oxide nanoparticles, Tomasz Puzyn, Bakhtiyor Rasulev, Agnieszka Gajewicz, Xiaoke Hu, Thabitha P Dasari, Andrea Michalkova, Huey-Min Hwang, Andrey Toropov, Danuta Leszczynska, Jerzy Leszczynski, Nature Nanotechnology, 2011 M6(3), DOI: 10.1038/nnano.2011.10.
     post:
+      title: Toxicity Metal-Oxide: Puzyn 2011
+      description: Prediction of toxicity of Metal-Ozide (log(1/EC50)). It corresponds to the model presented in: Using nano-QSAR to predict the cytotoxicity of metal oxide nanoparticles, Tomasz Puzyn, Bakhtiyor Rasulev, Agnieszka Gajewicz, Xiaoke Hu, Thabitha P Dasari, Andrea Michalkova, Huey-Min Hwang, Andrey Toropov, Danuta Leszczynska, Jerzy Leszczynski, Nature Nanotechnology, 2011 M6(3), DOI: 10.1038/nnano.2011.10.
       requestBody:
         content:
           application/json:
