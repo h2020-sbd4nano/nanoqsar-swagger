@@ -7,7 +7,7 @@ servers:
 paths:
   /puzyn_2011:
     post:
-      description: Prediction of toxicity of Metal-Ozide (log(1/EC50))
+      description: Prediction of toxicity of Metal-Oxide (log(1/EC50))
       requestBody:
         content:
           application/json:
@@ -18,6 +18,7 @@ paths:
           description: OK
   /2022_papas_eq1:
     post:
+      description: LDH(TiO2+ZnO): Papa 2015
       requestBody:
         content:
           application/json:
@@ -28,6 +29,7 @@ paths:
           description: OK
   /2022_papas_eq2:
     post:
+      description: LDH(TiO2): Papa 2015
       requestBody:
         content:
           application/json:
@@ -38,11 +40,23 @@ paths:
           description: OK
   /2022_papas_eq3:
     post:
+      description: LDH(ZnO): Papa 2015
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/PapaMessage'
+      responses:
+        200:
+          description: OK
+  /anantha_2021:
+    post:
+      description: Toxicity Metal-Oxide: Anantha 2021
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnanthaMessage'
       responses:
         200:
           description: OK
@@ -85,3 +99,43 @@ components:
         - Size
         - Concentration
         - SizeInPbs
+    AnanthaMessage:
+      type: object
+      properties:
+        Size:
+          type: number
+          description: Size (nm)
+        Hydro:
+          type: number
+          description: HydroSize (nm)
+        Charge:
+          type: number
+          description: SurfCharge (eV)
+        Area:
+          type: number
+          description: SurfArea (nm2)
+        Ec:
+          type: number
+          description: Ec (eV)
+        Time:
+          type: number
+          description: Time (s)
+        Dose:
+          type: number
+          description: Dose (mg)
+        Eneg:
+          type: number
+          description: Eneg (eV)
+        Noxygen:
+          type: number
+          description: NOxygen
+      required:
+        - Size
+        - Hydro
+        - Charge
+        - Area
+        - Ec
+        - Time
+        - Dose
+        - Eneg
+        - Noxygen
