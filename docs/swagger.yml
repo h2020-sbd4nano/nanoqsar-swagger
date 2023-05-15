@@ -15,14 +15,72 @@ paths:
       responses:
         200:
           description: OK
+  /2022_papas_eq1:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PapaMessage'
+      responses:
+        200:
+          description: OK
+  /2022_papas_eq2:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PapaShorterMessage'
+      responses:
+        200:
+          description: OK
+  /2022_papas_eq3:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PapaMessage'
+      responses:
+        200:
+          description: OK
 
 components:
   schemas:
     PuzynMessage:
       type: object
       properties:
-        gasCation:
+        GasCation:
           type: number
-          description: Enthalpy of formation of a gaseous cation (Kcal/mol)
+          description: Enthalpy of formation of a gaseous cation (kcal/mol)
       required:
-        - gasCation
+        - GasCation
+    PapaShorterMessage:
+      type: object
+      properties:
+        Size:
+          type: number
+          description: Size (diameter in nm)
+        Concentration:
+          type: number
+          description: Concentration (mg/L)
+      required:
+        - Size
+        - Concentration
+    PapaMessage:
+      type: object
+      properties:
+        Size:
+          type: number
+          description: Size (diameter in nm)
+        Concentration:
+          type: number
+          description: Concentration (mg/L)
+        SizeInPbs:
+          type: number
+          description: Size in Pbs (diameter in nm)
+      required:
+        - Size
+        - Concentration
+        - SizeInPbs
